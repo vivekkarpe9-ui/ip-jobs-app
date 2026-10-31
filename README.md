@@ -12,8 +12,14 @@ A premium mobile-first local work marketplace prototype starting in Bhopal, Madh
 - Demo posts saved only in the current browser
 - Basic PWA manifest and service-worker shell caching
 
-## Not yet connected
-No real accounts, shared database, verified employer profiles, applications, contact exchange, payment processing, notifications, admin review, moderation or server-side expiry. Sample job cards are illustrative demo data, not live vacancies.
+## V2 progress
+- A separate Supabase project has been created for iP Jobs in the Mumbai region.
+- Core PostgreSQL tables are in place: profiles, employer_verifications, jobs and applications.
+- Row Level Security is enabled on all four tables; the security advisor returned no security lint findings after permission tightening.
+- Email/password sign-up and sign-in interface code has been added. The public client configuration in `config.js` must be filled before authentication can connect; email verification settings and redirect URLs also need dashboard review.
+
+## Not yet connected or production-ready
+The frontend still uses illustrative sample job cards. Real job-feed and application queries, employer verification workflow, payment processing, notifications, admin review UI, moderation operations and automatic server-side expiry are not complete. Sample job cards are illustrative demo data, not live vacancies.
 
 ## Product pricing requirements — not implemented
 - Workers: free
